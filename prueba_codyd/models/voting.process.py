@@ -21,6 +21,13 @@ class VotingProcess(models.Model):
     def action_close(self):
         self.state = 'closed'
 
-class ResPartner(models.Model):
-    _inherit = 'res.partner'
-    is_candidate = fields.Boolean(string = 'Es candidato?')
+
+
+    class ResPartner(models.Model):
+        _inherit = 'res.partner'
+
+        is_closed_voter = fields.Boolean(string='Votante Cerrado', default=False)
+
+        @api.multi
+        def toggle_closed_voter(self):
+            self.is_closed_voter = not self.is_closed_voter
