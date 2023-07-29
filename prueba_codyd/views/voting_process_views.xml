@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <record id="view_voting_process_form" model="ir.ui.view">
+            <field name="name">voting.process.form</field>
+            <field name="model">voting.process</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="state"/>
+                            <field name="candidates"/>
+                            <field name="votes" widget="one2many_list">
+                                <tree>
+                                    <field name="voter"/>
+                                    <field name="candidate"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <footer>
+                            <button name="action_confirm" string="Iniciar Proceso" type="object" states="draft" class="btn-primary"/>
+                            <button name="action_close" string="Cerrar Proceso" type="object" states="in_process" class="btn-primary"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="view_vote_tree" model="ir.ui.view">
+            <field name="name">vote.tree</field>
+            <field name="model">vote</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="voter"/>
+                    <field name="candidate"/>
+                    <field name="voting_process_id"/>
+                    <field name="unique_vote"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

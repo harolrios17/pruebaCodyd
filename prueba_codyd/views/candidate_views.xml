@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <record id="view_res_partner_candidate_filter" model="ir.ui.view">
+            <field name="name">res.partner.candidate.filter</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <filter string="Candidatos" name="candidate_filter" domain="[('is_candidate', '=', True)]"/>
+            </field>
+        </record>
+    </data>
+</odoo>

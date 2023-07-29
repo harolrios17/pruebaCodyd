@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_voting_process,voting.process,model_voting_process,,1,1,1,1
+access_vote,vote,model_vote,,1,1,1,1
+access_res_partner,is_candidate,model_res_partner,,1,0,0,0
